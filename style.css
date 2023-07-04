@@ -104,6 +104,7 @@ nav {
 main > section {
   height: calc(100vh - 15px);
   display: grid;
+  padding-top: 90px;
 }
 
 .arrow img {
@@ -116,7 +117,7 @@ main > section {
 
 /* WELCOME SECTION */
 #welcome {
-  grid-template-rows: 20fr .4fr 4.5fr;
+  grid-template-rows: 20fr 0.4fr 4.5fr;
 }
 
 .gray-pic {
@@ -137,66 +138,58 @@ main > section {
 #welcome .arrow {
   position: relative;
   margin: 0 auto;
-  top: 30px
+  top: 30px;
 }
 
 /* ABOUT SECTION */
 
-#about {
-  grid-template-rows: 1fr 5fr;
-  padding-top: 90px;
-}
-
-#about > article {
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+main article {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }
 
 .side-image {
-  min-width: 220px;
-  flex: 0 1 25%;
+  flex: .35 1;
+}
+
+.side-image {
+  min-width: 200px;
 }
 
 .side-image img {
   max-width: 100%;
   display: block;
-  
+  transition: all 0.3s ease-out;
+}
+
+#about img {
   border-radius: 10%;
-  transition: scale 0.4s ease-out;
 }
 
-.side-image img:hover {
-  scale: 1.03;
+#about img:hover {
+  transform: scale(1.03);
 }
 
-.description {
-  min-width: 400px;
-  padding: 15px;
-  flex: 0 1 40%;
+.side-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 600px;
 }
 
-.description > p:not(:last-child) {
+.side-info p:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.description > p:first-child a {
-  font-weight: 900;
-  text-decoration: none;
-  color: inherit;
-}
-
-.description > p:first-child a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 630px) {
-  .side-image {
+@media (max-width: 625px) {
+  #about .side-image {
     display: none;
   }
 
-  .description {
-    flex: 1 1;
-    min-width: 400px;
+  #about article {
+    align-items: flex-start;
   }
 }
 
@@ -204,3 +197,4 @@ main > section {
 #trips {
   background-color: var(--yellow);
 }
+
