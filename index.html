@@ -1,81 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=IBM Plex Sans"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed:600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans:400,bolder" />
     <!-- <script defer src="animation.js"></script> -->
     <title>Leonardo</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="flex-stretch">
-      <a id="logo" href="#welcome"
-        ><img src="assets/images/logo.png" alt="logo"
-      /></a>
-      <ul id="navbar-links" class="flex-stretch">
-        <li class="flex-stretch">
-          <a class="link flex-center" href="#about">Sobre</a>
-        </li>
-        <li class="flex-stretch">
-          <a class="link flex-center" href="#">Viagens</a>
-        </li>
-        <li class="flex-stretch">
-          <a class="link flex-center" href="#">Animais</a>
-        </li>
-        <li class="flex-stretch">
-          <a class="link flex-center" href="#">Hobbies</a>
-        </li>
-        <li class="flex-stretch">
-          <a class="link flex-center" href="#">Acadêmico</a>
-        </li>
-      </ul>
+        <a id="logo" href="#welcome"><img src="assets/images/logo.png" alt="logo" /></a>
+        <ul id="navbar-links" class="flex-stretch">
+            <li class="flex-stretch">
+                <a class="link flex-center" href="#about">Sobre</a>
+            </li>
+            <li class="flex-stretch">
+                <a class="link flex-center" href="#trip1">Viagens</a>
+            </li>
+            <li class="flex-stretch">
+                <a class="link flex-center" href="#pets">Animais</a>
+            </li>
+            <li class="flex-stretch">
+                <a class="link flex-center" href="#hobbies">Hobbies</a>
+            </li>
+            <li class="flex-stretch">
+                <a class="link flex-center" href="#carreer">Acadêmico</a>
+            </li>
+        </ul>
     </nav>
     <main>
-      <section id="welcome" style="height: calc(100vh - 20px)">
-        <div class="gray-pic"></div>
-        <div class="gradient"></div>
-        <a class="arrow" href="#about"
-          ><img src="assets/icons/arrow.svg" alt="" style="width: 70px"
-        /></a>
-      </section>
+        <section id="welcome" style="height: 100vh">
+            <div class="gray-pic"></div>
+            <div class="gradient"></div>
+            <a class="arrow" href="#about"><img src="assets/icons/arrow-purple.svg" alt="" /></a>
+        </section>
 
-      <section id="about" class="">
-        <h1>Leonardo Reis Coimbra</h1>
-        <article>
-          <div class="side-image">
-            <div>
-              <img src="assets/images/me.jpg" alt="profile-pic" />
-            </div>
-          </div>
-          <div class="side-info">
-            <div>
-              <p>
-                Tenho 20 anos e sou discente de Ciência da Computação pela
-                <a href="https://www.unifal-mg.edu.br/portal/index/"
-                  >Universidade Federal de Alfenas</a
-                >
-                em Minas Gerais
-              </p>
-              <p>
-                Fui nascido e criado na região do Campo das Vertentes, mais
-                especificamente entre as cidades de Barroso e São João Del Rei,
-                porém atualmente moro em Alfenas devido aos estudos.
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
+        <section id="about">
+            <header>
+                <h1>Leonardo Reis Coimbra</h1>
+            </header>
+            <article>
+                <div class="side-image">
+                    <div style="min-width: 250px;">
+                        <img src="assets/images/me.jpg" alt="profile-pic" />
+                    </div>
+                </div>
+                <div class="side-info">
+                    <div>
+                        <p>
+                            Tenho 20 anos e sou discente de Ciência da Computação pela
+                            <a href="https://www.unifal-mg.edu.br/portal/index/">Universidade Federal de Alfenas</a>
+                            em Minas Gerais
+                        </p>
+                        <p>
+                            Fui nascido e criado na região do Campo das Vertentes, mais
+                            especificamente entre as cidades de Barroso e São João Del Rei,
+                            porém atualmente moro em Alfenas devido aos estudos
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
 
-      <section id="trips"></section>
+        <section id="trip1">
+            <article>
+                <div class="side-info">
+                    <header>
+                        <h1>Orlando</h1>
+                        <h3>Florida-EUA</h3>
+                    </header>
+                    <div>
+                        <p>Em Janeiro de 2018, tive a oportunidade de viver a experiência Disney</p>
+                        <p>Consegui praticar meu inglês fora do Brasil e esse fato resultou em momentos engraçados
+                            durante a viagem</p>
+                    </div>
+                    <a class="arrow" href="#trip2"><img src="assets/icons/arrow-purple.svg" alt=""
+                            style="transform: scale(.6);" /></a>
+                </div>
+                <div class="side-image">
+                    <div><img src="assets/images/cinderela_castle.JPEG" alt="Cinderela Castle"></div>
+                    <div style="flex: 1.2 0;"><img src="assets/images/ice_cream.JPEG" alt="Mickey Ice Cream"></div>
+                    <div><img src="assets/images/ciclop.jpeg" alt="Me and Ciclop Picture"></div>
+                </div>
+            </article>
+        </section>
+
+        <section id="trip2">
+            <article>
+                <div class="side-image">
+                    <div><img src="assets/images/iguacu.jpg" alt="Foz do iguacu Picture"></div>
+                </div>
+                <div class="side-info">
+                    <header>
+                        <h1>Foz do Iguaçu</h1>
+                        <h3>Paraná – Brasil</h3>
+                    </header>
+                    <div>
+                        <p>Em Novembro de 2014, conheci uma das 7 maravilhas do mundo</p>
+                        <p>Ter visitado a Ponte da Amizade e as Cataratas do Iguaçu foi uma viagem inesquecível </p>
+                    </div>
+                    <a class="arrow" href="#trip1"><img src="assets/icons/arrow-white.svg" alt=""
+                        style="transform: scale(.6) rotateZ(180deg);" /></a>
+                </div>
+            </article>
+        </section>
+
+        <section id="pets">
+            
+        </section>
     </main>
-  </body>
+</body>
+
 </html>

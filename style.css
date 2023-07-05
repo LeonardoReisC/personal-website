@@ -16,9 +16,9 @@
 
 html {
   font-family: "IBM Plex Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  word-spacing: 0;
   scroll-behavior: smooth;
 }
 
@@ -27,16 +27,22 @@ body {
   color: var(--violet);
 }
 
-h1 {
+header>* {
   text-align: center;
+}
+
+h1 {
+  font-size: 3.7em;
 }
 
 p {
   font-family: "IBM Plex Sans", sans-serif;
   text-align: center;
+  font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.12em;
-  word-spacing: 0.3em;
+  word-spacing: 0.42em;
+  line-height: 1.4em;
 }
 
 .flex-stretch {
@@ -101,13 +107,71 @@ nav {
 
 /* MAIN SECTION */
 
-main > section {
-  height: calc(100vh - 15px);
+main>section {
+  min-height: calc(100vh - 15px);
   display: grid;
+}
+
+main>section:not(:first-child) {
   padding-top: 90px;
 }
 
+main article {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  border: 1px solid black;
+
+}
+
+.side-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 0 30px;
+}
+
+.side-image>div {
+  transition: all 0.3s ease-out;
+}
+
+.side-image img {
+  max-width: 100%;
+  display: block;
+}
+
+.side-image>div:hover {
+  transform: scale(1.03);
+}
+
+.side-info {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 80px;
+  gap: 40px;
+  border: 1px solid black;
+}
+
+.side-info p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+main a {
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
 .arrow img {
+  width: 70px;
   transition: transform 0.3s;
 }
 
@@ -121,7 +185,7 @@ main > section {
 }
 
 .gray-pic {
-  width: 100%;
+  max-width: 100%;
   background-image: url(assets/images/me-gray.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -142,59 +206,76 @@ main > section {
 }
 
 /* ABOUT SECTION */
-
-main article {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-flow: row wrap;
+#about .side-image {
+  flex: 0.3 1;
 }
 
-.side-image {
-  flex: .35 1;
-}
-
-.side-image {
-  min-width: 200px;
-}
-
-.side-image img {
-  max-width: 100%;
-  display: block;
-  transition: all 0.3s ease-out;
+#about .side-info {
+  flex: .4 1;
+  min-width: 450px;
 }
 
 #about img {
   border-radius: 10%;
 }
 
-#about img:hover {
-  transform: scale(1.03);
-}
-
-.side-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 1 600px;
-}
-
-.side-info p:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 625px) {
-  #about .side-image {
-    display: none;
-  }
-
-  #about article {
-    align-items: flex-start;
-  }
-}
-
-/* TRIPS SECTION */
-#trips {
+/* TRIP1 SECTION */
+#trip1 {
   background-color: var(--yellow);
 }
 
+#trip1 .side-info {
+  flex: .3 0;
+  min-width: 400px;
+}
+
+#trip1 .side-image {
+  flex: .7 1;
+}
+
+#trip1 .side-image>div {
+  flex: 1 0;
+  margin: 5px;
+}
+
+#trip1 .side-image img {
+  border-radius: 10px;
+}
+
+/* TRIP2 SECTION */
+#trip2 {
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+#trip2 .side-image {
+  flex: 0.5 1;
+}
+
+#trip2 .side-image div {
+  max-width: 600px;
+  -webkit-mask-image: url(assets/images/mask.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+
+  mask-image: url(assets/images/mask.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+#trip2 .side-info {
+  flex: .4 1;
+  min-width: 450px;
+}
+
+@media (max-width: 768px) {
+  .side-image {
+    display: none;
+  }
+
+  .side-info {
+    flex: 1 1 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+}
