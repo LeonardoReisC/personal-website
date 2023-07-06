@@ -28,7 +28,7 @@
                 <a class="link flex-center" href="#hobbies">Hobbies</a>
             </li>
             <li class="flex-stretch">
-                <a class="link flex-center" href="#carreer">Acadêmico</a>
+                <a class="link flex-center" href="#career1">Acadêmico</a>
             </li>
         </ul>
     </nav>
@@ -36,17 +36,18 @@
         <section id="welcome" style="height: 100vh">
             <div class="gray-pic"></div>
             <div class="gradient"></div>
-            <a class="arrow" href="#about"><img src="assets/icons/arrow-purple.svg" alt="" /></a>
+            <a class="arrow" style="transform: none;" href="#about"><img class="transform"
+                    src="assets/icons/arrow-purple.svg" alt="" /></a>
         </section>
 
         <section id="about">
             <header>
                 <h1>Leonardo Reis Coimbra</h1>
             </header>
-            <article>
+            <article class="content">
                 <div class="side-image">
                     <div style="min-width: 250px;">
-                        <img src="assets/images/me.jpg" alt="profile-pic" />
+                        <img class="transform" src="assets/images/me.jpg" alt="profile-pic" />
                     </div>
                 </div>
                 <div class="side-info">
@@ -67,52 +68,260 @@
         </section>
 
         <section id="trip1">
-            <article>
+            <article class="content">
                 <div class="side-info">
                     <header>
                         <h1>Orlando</h1>
-                        <h3>Florida-EUA</h3>
+                        <h4>Florida &ndash; EUA</h4>
                     </header>
                     <div>
                         <p>Em Janeiro de 2018, tive a oportunidade de viver a experiência Disney</p>
                         <p>Consegui praticar meu inglês fora do Brasil e esse fato resultou em momentos engraçados
                             durante a viagem</p>
                     </div>
-                    <a class="arrow" href="#trip2"><img src="assets/icons/arrow-purple.svg" alt=""
-                            style="transform: scale(.6);" /></a>
+                    <a class="arrow" href="#trip2"><img class="transform" src="assets/icons/arrow-purple.svg"
+                            alt="" /></a>
                 </div>
                 <div class="side-image">
-                    <div><img src="assets/images/cinderela_castle.JPEG" alt="Cinderela Castle"></div>
-                    <div style="flex: 1.2 0;"><img src="assets/images/ice_cream.JPEG" alt="Mickey Ice Cream"></div>
-                    <div><img src="assets/images/ciclop.jpeg" alt="Me and Ciclop Picture"></div>
+                    <div><img class="transform" src="assets/images/cinderela_castle.JPEG" alt="Cinderela Castle"></div>
+                    <div style="flex: 1.5 0;"><img class="transform" src="assets/images/ice_cream.JPEG"
+                            alt="Mickey Ice Cream"></div>
+                    <div><img class="transform" src="assets/images/ciclop.jpeg" alt="Me and Ciclop Picture"></div>
                 </div>
             </article>
         </section>
 
         <section id="trip2">
-            <article>
+            <article class="content">
                 <div class="side-image">
-                    <div><img src="assets/images/iguacu.jpg" alt="Foz do iguacu Picture"></div>
+                    <div><img class="transform" src="assets/images/iguacu.jpg" alt="Foz do iguacu Picture"></div>
                 </div>
                 <div class="side-info">
                     <header>
                         <h1>Foz do Iguaçu</h1>
-                        <h3>Paraná – Brasil</h3>
+                        <h4>Paraná &ndash; Brasil</h4>
                     </header>
                     <div>
                         <p>Em Novembro de 2014, conheci uma das 7 maravilhas do mundo</p>
                         <p>Ter visitado a Ponte da Amizade e as Cataratas do Iguaçu foi uma viagem inesquecível </p>
                     </div>
-                    <a class="arrow" href="#trip1"><img src="assets/icons/arrow-white.svg" alt=""
-                        style="transform: scale(.6) rotateZ(180deg);" /></a>
+                    <a id="rotated" class="arrow" href="#trip1"><img class="transform"
+                            src="assets/icons/arrow-white.svg" alt="" /></a>
                 </div>
             </article>
         </section>
 
         <section id="pets">
-            
+            <header>
+                <h1>Animais</h1>
+            </header>
+            <article class="content">
+                <div class="side-info">
+                    <p>Gosto muito de animais…todos eles, principalmente cachorros já que tenho 2 AUmigas</p>
+                </div>
+                <div class="side-image">
+                    <section>
+                        <header>
+                            <h2>Nala</h2>
+                        </header>
+                        <div><img src="assets/images/nala_kiss.jpg" alt=""></div>
+                        <!-- CHANGE TO FIGURE CAPTURE AND ADD CAPTION TO IMAGE -->
+                    </section>
+                    <section>
+                        <header>
+                            <h2>Pretinha</h2>
+                        </header>
+                        <div><img src="assets/images/pretinha.jpg" alt=""></div>
+                    </section>
+                </div>
+            </article>
+        </section>
+
+        <section id="hobbies">
+            <section id="games" class="content">
+                <header>
+                    <h1>Games</h1>
+                </header>
+                <article class="content">
+                    <div class="side-info">
+                        <div>
+                            <p>Desde criança, sou apaixonado por games e curtas de animação</p>
+                        </div>
+                    </div>
+                    <div class="side-image">
+                        <div><a target="_blank" href="https://www.youtube.com/watch?v=8PbhGt8XxSM">
+                                <figure>
+                                    <div><img class="transform" id="lol" src="assets/images/leagueoflegends.jpg" alt="">
+                                    </div>
+                                    <figcaption>League Of Legends</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+
+                        <div><a target="_blank" href="https://www.youtube.com/watch?v=U130wnpi-C0">
+                                <figure>
+                                    <div><img class="transform" src="assets/images/overwatch.jpg" alt=""></div>
+                                    <figcaption>Overwatch</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+
+                        <div><a target="_blank" href="https://www.youtube.com/watch?v=e_E9W2vsRbQ">
+                                <figure>
+                                    <div><img class="transform" id="valorant" src="assets/images/valorant.jpg" alt="">
+                                    </div>
+                                    <figcaption>Valorant</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </article>
+            </section>
+            <section id="music" class="content">
+                <header>
+                    <h1>Músicas</h1>
+                </header>
+                <article class="content">
+                    <div class="side-info">
+                        <div>
+                            <p>Amo escutar músicas enquanto faço atividades que envolvam cálculos</p>
+                            <p>Adele é uma cantora que admiro bastante</p>
+                        </div>
+                    </div>
+                    <div class="side-image">
+                        <div><a target="_blank" href="https://www.youtube.com/watch?v=fbmI-z_mIpk"><img
+                                    class="transform" src="assets/images/adele.jpg" alt=""></a></div>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="career1">
+            <section id="computer-science" class="content">
+                <header>
+                    <h1>Computação</h1>
+                </header>
+                <article class="content">
+                    <div class="side-info">
+                        <div>
+                            <p>Em 2021, ingressei no curso de Ciência da Computação pela Universidade Federal de Alfenas
+                            </p>
+                            <p>Minha meta é trabalhar como desenvolvedor Full Stack e continuar minha carreira fora do
+                                Brasil</p>
+                        </div>
+                    </div>
+                    <div class="side-image">
+                        <div>
+                            <figure>
+                                <div class="flex-center"><img src="assets/icons/gaming_controller.svg" alt=""></div>
+                                <figcaption>
+                                    <p>Gosto por games e animações</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <div class="flex-center" style="background-color: var(--yellow);"><img
+                                        src="assets/icons/computer.svg" alt=""></div>
+                                <figcaption>
+                                    <p>Interessado em tecnologia e programação</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <div class="flex-center"><img src="assets/icons/book.svg" alt=""></div>
+                                <figcaption>
+                                    <p>Curte ler alguns livros acadêmicos</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="udemy" class="content">
+                <header>
+                    <h1>Udemy</h1>
+                </header>
+                <article class="content">
+                    <div class="side-info">
+                        <div>
+                            <p>Recentemente, interrompi meus estudos de JavaScript e dei início a um curso Udemy de
+                                Python que eu tinha muito interesse em fazer</p>
+                            <p>Meu objetivo é finalizá-lo até Agosto para dar continuidade ao meu estudo de
+                                Desenvolvimento Web e JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="side-image">
+
+                        <a style="width: 300px;" href="https://www.python.org">
+                            <img class="transform" src="assets/icons/python.svg" />
+                        </a>
+
+                        <a class="arrow" href="#career2">
+                            <img class="transform" src="assets/icons/arrow-purple.svg" alt="">
+                        </a>
+
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="career2">
+            <section>
+                <header>
+                    <h2>Inglês Avançado</h2>
+                    <h4>Cultura Inglesa</h4>
+                </header>
+                <article class="content">
+                    <div class=".side-info">
+                        <div><p>R. Dr. Balbino da Cunha, 181 &ndash; Centro, São João Del Rei &ndash; MG, 36307-350</p></div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h2>Ciência da Computação</h2>
+                    <h4>Unifal</h4>
+                </header>
+                <article class="content">
+                    <div class=".side-info">
+                        <div><p>Av. Jovino Fernandes de Sales, 2600 &ndash; Santa Clara, Alfenas &ndash; MG, 37133-840</p></div>
+                    </div>
+                </article>
+            </section>
         </section>
     </main>
+    <footer>
+        <div class="gradient"></div>
+        <section>
+            <section>
+                <header><h2>Endereço</h2></header>
+                <article class="content">
+                    <div class="side-info">
+                        <div><p>Praça Dr. Emílio Silveira, 398, Ap 204 – Centro, Alfenas – MG, 37130-029</p></div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <header><h2>Contato</h2></header>
+                <article>
+                    <div class="side-image">
+                        <a href="https://www.linkedin.com/in/leonardo-reis-coimbra-910444278/"><img class="transform" src="assets/icons/linkedin.svg" alt="bla"></a>
+                        <a href="#"><img class="transform" src="assets/icons/github.svg" alt=""></a>
+                        <a href="#"><img class="transform" src="assets/icons/instagram.svg" alt=""></a>
+                        <a href="#"><img class="transform" src="assets/icons/facebook.svg" alt=""></a>
+                        <a href="#"><img class="transform" src="assets/icons/gmail.svg" alt=""></a>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <div><p>bla</p></div>
+    </footer>
 </body>
 
 </html>
