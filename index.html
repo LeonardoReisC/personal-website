@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed:600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed:400, 600" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans:400,bolder" />
-    <!-- <script defer src="animation.js"></script> -->
+    <script defer src="animation.js"></script>
     <title>Leonardo</title>
 </head>
 
 <body>
     <nav class="flex-stretch">
         <a id="logo" href="#welcome"><img src="assets/images/logo.png" alt="logo" /></a>
-        <ul id="navbar-links" class="flex-stretch">
+        <ul id="navbar-links" class="flex-stretch hide">
             <li class="flex-stretch">
                 <a class="link flex-center" href="#about">Sobre</a>
             </li>
@@ -35,23 +35,23 @@
     <main>
         <section id="welcome" style="height: 100vh">
             <div class="gray-pic"></div>
-            <div class="gradient"></div>
-            <a class="arrow" style="transform: none;" href="#about"><img class="transform"
-                    src="assets/icons/arrow-purple.svg" alt="" /></a>
+            <div class="gradient hidden"></div>
+            <a class="arrow hidden" style="transform: none;" href="#about"><img class="transform"
+                    src="assets/icons/arrow-purple.svg" alt="scroll-down-arrow" /></a>
         </section>
 
-        <section id="about">
+        <section id="about" class="container">
             <header>
                 <h1>Leonardo Reis Coimbra</h1>
             </header>
             <article class="content">
-                <div class="side-image">
+                <div class="side-image hide">
                     <div style="min-width: 250px;">
                         <img class="transform" src="assets/images/me.jpg" alt="profile-pic" />
                     </div>
                 </div>
                 <div class="side-info">
-                    <div>
+                    <div class="description hidden">
                         <p>
                             Tenho 20 anos e sou discente de Ciência da Computação pela
                             <a href="https://www.unifal-mg.edu.br/portal/index/">Universidade Federal de Alfenas</a>
@@ -67,22 +67,22 @@
             </article>
         </section>
 
-        <section id="trip1">
+        <section id="trip1" class="container">
             <article class="content">
                 <div class="side-info">
                     <header>
                         <h1>Orlando</h1>
-                        <h4>Florida &ndash; EUA</h4>
+                        <h5>Florida &ndash; EUA</h5>
                     </header>
-                    <div>
+                    <div class="description hidden">
                         <p>Em Janeiro de 2018, tive a oportunidade de viver a experiência Disney</p>
                         <p>Consegui praticar meu inglês fora do Brasil e esse fato resultou em momentos engraçados
                             durante a viagem</p>
                     </div>
                     <a class="arrow" href="#trip2"><img class="transform" src="assets/icons/arrow-purple.svg"
-                            alt="" /></a>
+                            alt="scroll-down-arrow" /></a>
                 </div>
-                <div class="side-image">
+                <div class="side-image hide">
                     <div><img class="transform" src="assets/images/cinderela_castle.JPEG" alt="Cinderela Castle"></div>
                     <div style="flex: 1.5 0;"><img class="transform" src="assets/images/ice_cream.JPEG"
                             alt="Mickey Ice Cream"></div>
@@ -91,165 +91,172 @@
             </article>
         </section>
 
-        <section id="trip2">
+        <section id="trip2" class="container">
             <article class="content">
-                <div class="side-image">
+                <div class="side-image hide">
                     <div><img class="transform" src="assets/images/iguacu.jpg" alt="Foz do iguacu Picture"></div>
                 </div>
                 <div class="side-info">
                     <header>
                         <h1>Foz do Iguaçu</h1>
-                        <h4>Paraná &ndash; Brasil</h4>
+                        <h5>Paraná &ndash; Brasil</h5>
                     </header>
-                    <div>
+                    <div class="description hidden">
                         <p>Em Novembro de 2014, conheci uma das 7 maravilhas do mundo</p>
                         <p>Ter visitado a Ponte da Amizade e as Cataratas do Iguaçu foi uma viagem inesquecível </p>
                     </div>
                     <a id="rotated" class="arrow" href="#trip1"><img class="transform"
-                            src="assets/icons/arrow-white.svg" alt="" /></a>
+                            src="assets/icons/arrow-white.svg" alt="scroll-up-arrow" /></a>
                 </div>
             </article>
         </section>
 
-        <section id="pets">
+        <section id="pets" class="container">
             <header>
                 <h1>Animais</h1>
             </header>
             <article class="content">
                 <div class="side-info">
-                    <p>Gosto muito de animais…todos eles, principalmente cachorros já que tenho 2 AUmigas</p>
+                    <div class="description hidden">
+                        <p>Gosto muito de animais…todos eles, principalmente cachorros já que tenho 2 AUmigas</p>
+                    </div>
                 </div>
-                <div class="side-image">
+                <div class="side-image column">
                     <section>
                         <header>
                             <h2>Nala</h2>
                         </header>
-                        <div><img src="assets/images/nala_kiss.jpg" alt=""></div>
-                        <!-- CHANGE TO FIGURE CAPTURE AND ADD CAPTION TO IMAGE -->
+                        <figure>
+                            <div><img src="assets/images/nala_kiss.jpg" alt="Me and Nala"></div>
+                            <figcaption>
+                                <i>Cãopanheira</i>
+                            </figcaption>
+                        </figure>
+
                     </section>
                     <section>
                         <header>
                             <h2>Pretinha</h2>
                         </header>
-                        <div><img src="assets/images/pretinha.jpg" alt=""></div>
+                        <figure>
+                            <div><img src="assets/images/pretinha.jpg" alt="Pretinha"></div>
+                            <figcaption style="text-align: center;">
+                                <i>Depois do banho</i>
+                            </figcaption>
+                        </figure>
                     </section>
                 </div>
             </article>
         </section>
 
-        <section id="hobbies">
-            <section id="games" class="content">
+        <section id="hobbies" class="grid-column">
+            <section id="games" class="container content">
                 <header>
                     <h1>Games</h1>
                 </header>
                 <article class="content">
                     <div class="side-info">
-                        <div>
+                        <div class="description hidden">
                             <p>Desde criança, sou apaixonado por games e curtas de animação</p>
                         </div>
                     </div>
-                    <div class="side-image">
-                        <div><a target="_blank" href="https://www.youtube.com/watch?v=8PbhGt8XxSM">
-                                <figure>
-                                    <div><img class="transform" id="lol" src="assets/images/leagueoflegends.jpg" alt="">
-                                    </div>
-                                    <figcaption>League Of Legends</figcaption>
-                                </figure>
-                            </a>
-                        </div>
+                    <div class="side-image column">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=8PbhGt8XxSM">
+                            <figure>
+                                <div><img class="transform" id="lol" src="assets/images/leagueoflegends.jpg"
+                                        alt="League Of Legends Pic">
+                                </div>
+                                <figcaption><i>League Of Legends</i></figcaption>
+                            </figure>
+                        </a>
 
+                        <a target="_blank" href="https://www.youtube.com/watch?v=U130wnpi-C0">
+                            <figure>
+                                <div><img class="transform" src="assets/images/overwatch.jpg" alt="Overwatch Pic"></div>
+                                <figcaption><i>Overwatch</i></figcaption>
+                            </figure>
+                        </a>
 
-                        <div><a target="_blank" href="https://www.youtube.com/watch?v=U130wnpi-C0">
-                                <figure>
-                                    <div><img class="transform" src="assets/images/overwatch.jpg" alt=""></div>
-                                    <figcaption>Overwatch</figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-
-                        <div><a target="_blank" href="https://www.youtube.com/watch?v=e_E9W2vsRbQ">
-                                <figure>
-                                    <div><img class="transform" id="valorant" src="assets/images/valorant.jpg" alt="">
-                                    </div>
-                                    <figcaption>Valorant</figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-
+                        <a target="_blank" href="https://www.youtube.com/watch?v=e_E9W2vsRbQ">
+                            <figure>
+                                <div><img class="transform" id="valorant" src="assets/images/valorant.jpg"
+                                        alt="Valorant Pic">
+                                </div>
+                                <figcaption><i>Valorant</i></figcaption>
+                            </figure>
+                        </a>
                     </div>
                 </article>
             </section>
-            <section id="music" class="content">
+            <section id="music" class="container content">
                 <header>
                     <h1>Músicas</h1>
                 </header>
                 <article class="content">
                     <div class="side-info">
-                        <div>
+                        <div class="description hidden">
                             <p>Amo escutar músicas enquanto faço atividades que envolvam cálculos</p>
                             <p>Adele é uma cantora que admiro bastante</p>
                         </div>
                     </div>
-                    <div class="side-image">
-                        <div><a target="_blank" href="https://www.youtube.com/watch?v=fbmI-z_mIpk"><img
-                                    class="transform" src="assets/images/adele.jpg" alt=""></a></div>
+                    <div class="side-image column">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=fbmI-z_mIpk"><img class="transform"
+                                src="assets/images/adele.jpg" alt=""></a>
                     </div>
                 </article>
             </section>
         </section>
 
-        <section id="career1">
-            <section id="computer-science" class="content">
+        <section id="career1" class="grid-column">
+            <section id="computer-science" class="container content">
                 <header>
                     <h1>Computação</h1>
                 </header>
                 <article class="content">
                     <div class="side-info">
-                        <div>
+                        <div class="description hidden">
                             <p>Em 2021, ingressei no curso de Ciência da Computação pela Universidade Federal de Alfenas
                             </p>
                             <p>Minha meta é trabalhar como desenvolvedor Full Stack e continuar minha carreira fora do
                                 Brasil</p>
                         </div>
                     </div>
-                    <div class="side-image">
-                        <div>
-                            <figure>
-                                <div class="flex-center"><img src="assets/icons/gaming_controller.svg" alt=""></div>
-                                <figcaption>
-                                    <p>Gosto por games e animações</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div>
-                            <figure>
-                                <div class="flex-center" style="background-color: var(--yellow);"><img
-                                        src="assets/icons/computer.svg" alt=""></div>
-                                <figcaption>
-                                    <p>Interessado em tecnologia e programação</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div>
-                            <figure>
-                                <div class="flex-center"><img src="assets/icons/book.svg" alt=""></div>
-                                <figcaption>
-                                    <p>Curte ler alguns livros acadêmicos</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <div class="side-image column">
+
+                        <figure class="pc hidden">
+                            <div class="flex-center"><img src="assets/icons/gaming_controller.svg" alt=""></div>
+                            <figcaption>
+                                <p>Gosto por games e animações</p>
+                            </figcaption>
+                        </figure>
+
+
+                        <figure class="hidden">
+                            <div class="flex-center" style="background-color: var(--yellow);"><img
+                                    src="assets/icons/computer.svg" alt=""></div>
+                            <figcaption>
+                                <p>Interessado em tecnologia e programação</p>
+                            </figcaption>
+                        </figure>
+
+
+                        <figure class="pc hidden">
+                            <div class="flex-center"><img src="assets/icons/book.svg" alt=""></div>
+                            <figcaption>
+                                <p>Curte ler alguns livros acadêmicos</p>
+                            </figcaption>
+                        </figure>
+
                     </div>
                 </article>
             </section>
-            <section id="udemy" class="content">
+            <section id="udemy" class="container content">
                 <header>
                     <h1>Udemy</h1>
                 </header>
                 <article class="content">
                     <div class="side-info">
-                        <div>
+                        <div class="description hidden">
                             <p>Recentemente, interrompi meus estudos de JavaScript e dei início a um curso Udemy de
                                 Python que eu tinha muito interesse em fazer</p>
                             <p>Meu objetivo é finalizá-lo até Agosto para dar continuidade ao meu estudo de
@@ -258,8 +265,8 @@
                     </div>
                     <div class="side-image">
 
-                        <a style="width: 300px;" href="https://www.python.org">
-                            <img class="transform" src="assets/icons/python.svg" />
+                        <a class="hide" style="width: 150px; height: 150px;" href="https://www.python.org">
+                            <img class="transform" src="assets/icons/python.png" />
                         </a>
 
                         <a class="arrow" href="#career2">
@@ -271,26 +278,31 @@
             </section>
         </section>
 
-        <section id="career2">
-            <section>
+        <section id="career2" class="grid-column">
+            <section class="container">
                 <header>
-                    <h2>Inglês Avançado</h2>
+                    <h3>Inglês Avançado</h3>
                     <h4>Cultura Inglesa</h4>
                 </header>
                 <article class="content">
-                    <div class=".side-info">
-                        <div><p>R. Dr. Balbino da Cunha, 181 &ndash; Centro, São João Del Rei &ndash; MG, 36307-350</p></div>
+                    <div class="side-info">
+                        <div>
+                            <p>R. Dr. Balbino da Cunha, 181 &ndash; Centro, São João Del Rei &ndash; MG, 36307-350</p>
+                        </div>
                     </div>
                 </article>
             </section>
-            <section>
+            <section class="container">
                 <header>
-                    <h2>Ciência da Computação</h2>
+                    <h3>Ciência da Computação</h3>
                     <h4>Unifal</h4>
                 </header>
                 <article class="content">
                     <div class=".side-info">
-                        <div><p>Av. Jovino Fernandes de Sales, 2600 &ndash; Santa Clara, Alfenas &ndash; MG, 37133-840</p></div>
+                        <div>
+                            <p>Av. Jovino Fernandes de Sales, 2600 &ndash; Santa Clara, Alfenas &ndash; MG, 37133-840
+                            </p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -298,20 +310,27 @@
     </main>
     <footer>
         <div class="gradient"></div>
-        <section>
+        <section class="container grid-column">
             <section>
-                <header><h2>Endereço</h2></header>
+                <header>
+                    <h2>Endereço</h2>
+                </header>
                 <article class="content">
                     <div class="side-info">
-                        <div><p>Praça Dr. Emílio Silveira, 398, Ap 204 – Centro, Alfenas – MG, 37130-029</p></div>
+                        <div>
+                            <p>Praça Dr. Emílio Silveira, 398, Ap 204 – Centro, Alfenas – MG, 37130-029</p>
+                        </div>
                     </div>
                 </article>
             </section>
             <section>
-                <header><h2>Contato</h2></header>
+                <header>
+                    <h2>Contato</h2>
+                </header>
                 <article>
                     <div class="side-image">
-                        <a href="https://www.linkedin.com/in/leonardo-reis-coimbra-910444278/"><img class="transform" src="assets/icons/linkedin.svg" alt="bla"></a>
+                        <a href="https://www.linkedin.com/in/leonardo-reis-coimbra-910444278/"><img class="transform"
+                                src="assets/icons/linkedin.svg" alt="bla"></a>
                         <a href="#"><img class="transform" src="assets/icons/github.svg" alt=""></a>
                         <a href="#"><img class="transform" src="assets/icons/instagram.svg" alt=""></a>
                         <a href="#"><img class="transform" src="assets/icons/facebook.svg" alt=""></a>
@@ -320,7 +339,10 @@
                 </article>
             </section>
         </section>
-        <div><p>bla</p></div>
+        <div id="copyright" class="flex-center" style="gap: 10px;"><img src="assets/icons/copyright.svg"
+                alt="copyright-symbol"> 2023
+            Leonardo Reis Coimbra
+            | All Rights Deserved</div>
     </footer>
 </body>
 

@@ -1,4 +1,4 @@
-/* PRESETS */
+/*----------------------------------------------- PRESETS -----------------------------------------------*/
 
 :root {
   --violet: #32174d;
@@ -27,12 +27,29 @@ body {
   color: var(--violet);
 }
 
-header>* {
+header>*,
+figcaption {
   text-align: center;
 }
 
 h1 {
-  font-size: 3.7em;
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 p {
@@ -67,7 +84,7 @@ img {
   align-items: center;
 }
 
-/* NAV BAR */
+/*----------------------------------------------- NAV BAR -----------------------------------------------*/
 nav {
   position: fixed;
   top: 0;
@@ -94,7 +111,7 @@ nav {
 
   justify-content: center;
   flex-grow: 1;
-
+  
   list-style-type: none;
 }
 
@@ -116,15 +133,16 @@ nav {
   border-color: var(--violet);
 }
 
-/* MAIN SECTION */
+/*----------------------------------------------- MAIN SECTION -----------------------------------------------*/
 
 main>section {
   min-height: calc(100vh - 15px);
   display: grid;
 }
 
-main>section:not(:first-child) {
-  padding-top: 90px;
+.container {
+  padding: 90px 40px 0;
+  align-items: center;
 }
 
 .content {
@@ -132,15 +150,13 @@ main>section:not(:first-child) {
   align-items: stretch;
   justify-content: space-around;
   flex-flow: row nowrap;
-  margin: 0 40px;
 }
 
 .side-image {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-flow: row nowrap;
-  border: 1px solid black;
+  flex-flow: row nowrap;  
 }
 
 .transform {
@@ -157,7 +173,6 @@ main>section:not(:first-child) {
   flex-flow: column;
   justify-content: center;
   gap: 40px;
-  border: 1px solid black;
 }
 
 .side-info p:not(:last-child) {
@@ -168,7 +183,7 @@ main>section:not(:first-child) {
   transform: scale(1.1);
 }
 
-/* WELCOME SECTION */
+/*----------------------------------------------- WELCOME SECTION -----------------------------------------------*/
 #welcome {
   grid-template-rows: 4fr 10px 1fr;
 }
@@ -184,17 +199,29 @@ main>section:not(:first-child) {
 }
 
 .gradient {
-  width: 100%;
+  width: 0;
   background-image: linear-gradient(to right, var(--violet) 30%, var(--yellow));
+  transition: width;
+}
+
+.gradient.show {
+  animation: GradientLtoR 2s ease-out .3s forwards;
 }
 
 #welcome .arrow {
+  opacity: 0;
   position: relative;
   margin: 0 auto;
   top: 30px;
+  transition: transform;
+  transform: opacity;
 }
 
-/* ABOUT SECTION */
+#welcome .arrow.show {
+  animation: ComeFromBelow 1.3s ease .3s forwards;
+}
+
+/*----------------------------------------------- ABOUT SECTION -----------------------------------------------*/
 #about {
   grid-template-rows: auto 1fr;
 }
@@ -222,7 +249,16 @@ main>section:not(:first-child) {
   text-decoration: underline;
 }
 
-/* TRIP1 SECTION */
+.description {
+  opacity: 0;
+  transition: opacity;
+}
+
+.description.show {
+  animation: ShowUp 1s ease-in-out .2s forwards;
+}
+
+/*----------------------------------------------- TRIP1 SECTION -----------------------------------------------*/
 #trip1 {
   background-color: var(--yellow);
 }
@@ -245,7 +281,7 @@ main>section:not(:first-child) {
   border-radius: 10px;
 }
 
-/* TRIP2 SECTION */
+/*----------------------------------------------- TRIP2 SECTION -----------------------------------------------*/
 #trip2 {
   background-color: var(--violet);
   color: var(--white);
@@ -275,7 +311,7 @@ main>section:not(:first-child) {
   transform: scale(.6) rotateZ(180deg);
 }
 
-/* PETS SECTION*/
+/*----------------------------------------------- PETS SECTION -----------------------------------------------*/
 #pets {
   grid-template-rows: auto 1fr;
 }
@@ -291,7 +327,8 @@ main>section:not(:first-child) {
 
 #pets .side-image>section {
   flex: .24 1;
-  min-width: 100px;
+
+  max-width: 500px;
 }
 
 #pets .side-image header {
@@ -307,43 +344,44 @@ main>section:not(:first-child) {
   border-radius: 20px;
 }
 
-/* HOBBIES SECTION */
+#pets .side-image figcaption {
+  font-weight: 400;
+}
+
+/*----------------------------------------------- HOBBIES SECTION -----------------------------------------------*/
 #hobbies {
   grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient(to right, var(--violet) 50%, var(--yellow) 50%);
 }
 
 #hobbies .content {
   flex-direction: column;
 }
 
-#hobbies header {
-  flex: .1 0;
-}
-
 #games {
   color: var(--white);
-  grid-template-rows: auto 1fr;
+  background-color: var(--violet);
 }
 
 #games .content,
 #music .content {
-  flex: .86 0;
-  margin: 0;
-  justify-content: space-around;
+  flex: .95 0;
 }
 
 #hobbies .side-image div {
+  min-width: 135px;
+}
+
+#hobbies .side-image img {
   filter: grayscale(100%);
 }
 
-#hobbies .side-image div:hover {
+#hobbies .side-image img:hover {
   filter: grayscale(0%);
 }
 
 #games .side-image a {
   text-decoration: none;
-  text-align: center;
+  color: inherit;
 }
 
 #lol {
@@ -358,12 +396,17 @@ main>section:not(:first-child) {
   transform: translateY(-15px);
 }
 
+#music {
+  background-color: var(--yellow);
+  color: inherit;
+}
+
 #music .side-image img {
   border-radius: 20px;
 }
 
 
-/* CAREER SECTION */
+/*----------------------------------------------- CAREER1 SECTION -----------------------------------------------*/
 #career1 {
   grid-template-columns: 1fr 1fr;
 }
@@ -374,15 +417,19 @@ main>section:not(:first-child) {
 
 #computer-science .content,
 #udemy .content {
-  flex: 1 1;
-  margin: 0;
-  justify-content: space-evenly;
+  flex: .86 0;
 }
 
 #computer-science .side-image {
   flex: .4 0;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+#computer-science .side-image figure {
+  opacity: 0;
+  transition: opacity;
+  transition: transform;
 }
 
 #computer-science .side-image figure>div {
@@ -397,12 +444,27 @@ main>section:not(:first-child) {
   max-width: 50%;
 }
 
+#computer-science .side-image figure:first-child.show {
+  animation: ComeFromBelow 1s ease-in-out .6s forwards;
+}
+
+#computer-science .side-image figure:nth-child(2).show {
+  animation: ComeFromBelow 1s ease-in-out .8s forwards;
+}
+
+#computer-science .side-image figure:last-child.show {
+  animation: ComeFromBelow 1s ease-in-out 1s forwards;
+}
+
 #udemy .side-image {
   justify-content: space-around;
 }
 
+#udemy .description.show {
+  animation: ShowUp 1s ease-in-out 1.4s forwards;
+}
 
-
+/*----------------------------------------------- CAREER1 SECTION -----------------------------------------------*/
 #career2 {
   background-color: var(--yellow);
   min-height: 65vh;
@@ -412,62 +474,137 @@ main>section:not(:first-child) {
   align-items: center;
 }
 
-#career2 > section {
+#career2>section {
   background-color: var(--violet);
   color: var(--white);
-  padding: 30px 0px;
+  padding: 25px 40px;
 }
 
-#career2 header{
-  font-size: 20px;
+#career2 header {
   margin-bottom: 25px;
 }
 
-#career2 >section:first-child {
+#career2>section:first-child {
   border-radius: 0 35px;
 }
 
-#career2 >section:last-child {
+#career2>section:last-child {
   border-radius: 35px 0;
 }
 
-
-
-
-/* FOOTER SECTION */
+/*----------------------------------------------- FOOTER SECTION -----------------------------------------------*/
 footer {
   display: grid;
   min-height: 35vh;
-  grid-template-rows: 10px 1fr 20px;
+  grid-template-rows: 10px 1fr 40px;
 }
 
-footer > section {
+footer .container {
+  padding-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  padding-top: 20px;
+  align-items: center;
+
 }
 
-footer > section header {
-  font-size: 30px;
+footer>section header {
   margin-bottom: 20px;
 }
 
 footer .side-image {
-  align-content: baseline;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+#copyright {
+  text-align: center;
+}
 
-  .side-image {
+/*----------------------------------------------- ANIMATION SECTION -----------------------------------------------*/
+@keyframes GradientLtoR {
+  from {
+    width: 0%;
+
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes ComeFromBelow {
+  from {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes ShowUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------------- MEDIA SECTION -----------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  main * {
+    min-width: 0 !important;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .hide {
     display: none;
+  }
+
+  .column {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 20px;
+  }
+
+  .grid-column {
+    grid-template-columns: 1fr !important;
+  }
+
+  #pets .content,
+  .grid-column .content {
+    gap: 20px;
+  }
+
+  .container {
+    padding: 10px 0;
+  }
+
+  #career2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .grid-column img {
+    max-width: 300px;
+    border-radius: 20px !important;
   }
 
   .side-info {
     flex: 1 1 !important;
-    min-width: 0 !important;
-    padding: 0 !important;
+    padding: 0 40px !important;
   }
+}
 
-
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .pc {
+    display: none;
+  }
 }
