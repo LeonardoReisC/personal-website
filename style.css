@@ -1,5 +1,4 @@
 /*----------------------------------------------- PRESETS -----------------------------------------------*/
-
 :root {
   --violet: #32174d;
   --yellow: #ffef00;
@@ -25,6 +24,24 @@ html {
 body {
   background-color: var(--white);
   color: var(--violet);
+}
+
+::-webkit-scrollbar {
+  width: auto;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #32174dAA;
+  border: 4px solid var(--white);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #32174dFF;
 }
 
 header>*,
@@ -580,6 +597,10 @@ footer .side-image {
 
   nav {
     justify-content: space-between;
+  }
+
+  .gray-pic {
+    background-position: center center;
   }
 
   .hide {
