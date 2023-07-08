@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed:400, 600" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans:400,bolder" />
-    <script defer src="animation.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script defer src="observer.js"></script>
+
+    <!-- carousel scripts imported -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
     <title>Leonardo</title>
 </head>
 
 <body>
+    <!-- ----------------------------------------------- NAV BAR ----------------------------------------------- -->
     <nav class="flex-stretch">
         <a id="logo" href="#welcome"><img src="assets/images/logo.png" alt="logo" /></a>
         <ul id="navbar-links" class="flex-stretch hide">
@@ -33,13 +42,15 @@
         </ul>
     </nav>
     <main>
+        <!-- ----------------------------------------------- INITIAL PAGE ----------------------------------------------- -->
         <section id="welcome" style="height: 100vh">
             <div class="gray-pic"></div>
             <div class="gradient hidden"></div>
             <a class="arrow hidden" style="transform: none;" href="#about"><img class="transform"
-                    src="assets/icons/arrow-purple.svg" alt="scroll-down-arrow" /></a>
+                    src="assets/icons/arrow-purple.svg" alt="move-down-arrow" /></a>
         </section>
 
+        <!-- ----------------------------------------------- ABOUT SECTION ----------------------------------------------- -->
         <section id="about" class="container">
             <header>
                 <h1>Leonardo Reis Coimbra</h1>
@@ -47,7 +58,7 @@
             <article class="content">
                 <div class="side-image hide">
                     <div style="min-width: 250px;">
-                        <img class="transform" src="assets/images/me.jpg" alt="profile-pic" />
+                        <img class="transform" src="assets/images/me.jpg" alt="profile-pic" title="Leonardo" />
                     </div>
                 </div>
                 <div class="side-info">
@@ -67,12 +78,13 @@
             </article>
         </section>
 
+        <!-- ----------------------------------------------- FIRST TRIP SECTION ----------------------------------------------- -->
         <section id="trip1" class="container">
             <article class="content">
                 <div class="side-info">
                     <header>
                         <h1>Orlando</h1>
-                        <h5>Florida &ndash; EUA</h5>
+                        <h6>Florida &ndash; EUA</h6>
                     </header>
                     <div class="description hidden">
                         <p>Em Janeiro de 2018, tive a oportunidade de viver a experiência Disney</p>
@@ -80,37 +92,42 @@
                             durante a viagem</p>
                     </div>
                     <a class="arrow" href="#trip2"><img class="transform" src="assets/icons/arrow-purple.svg"
-                            alt="scroll-down-arrow" /></a>
+                            alt="move-down-arrow" /></a>
                 </div>
                 <div class="side-image hide">
-                    <div><img class="transform" src="assets/images/cinderela_castle.JPEG" alt="Cinderela Castle"></div>
+                    <div><img class="transform" src="assets/images/cinderela_castle.JPEG" alt="Cinderela's Castle"
+                            title="Cinderela's Castle"></div>
                     <div style="flex: 1.5 0;"><img class="transform" src="assets/images/ice_cream.JPEG"
-                            alt="Mickey Ice Cream"></div>
-                    <div><img class="transform" src="assets/images/ciclop.jpeg" alt="Me and Ciclop Picture"></div>
+                            alt="Mickey's Ice Cream" title="Mickey's Ice Cream"></div>
+                    <div><img class="transform" src="assets/images/ciclop.jpeg" alt="Me and Cyclops Picture"
+                            title="Me and Cyclops"></div>
                 </div>
             </article>
         </section>
 
+        <!-- ----------------------------------------------- SECOND TRIP SECTION ----------------------------------------------- -->
         <section id="trip2" class="container">
             <article class="content">
                 <div class="side-image hide">
-                    <div><img class="transform" src="assets/images/iguacu.jpg" alt="Foz do iguacu Picture"></div>
+                    <div><img class="transform" src="assets/images/iguacu.jpg" alt="Foz do Iiguacu Picture"
+                            title="Iguaçu Falls"></div>
                 </div>
                 <div class="side-info">
                     <header>
                         <h1>Foz do Iguaçu</h1>
-                        <h5>Paraná &ndash; Brasil</h5>
+                        <h6>Paraná &ndash; Brasil</h6>
                     </header>
                     <div class="description hidden">
                         <p>Em Novembro de 2014, conheci uma das 7 maravilhas do mundo</p>
                         <p>Ter visitado a Ponte da Amizade e as Cataratas do Iguaçu foi uma viagem inesquecível </p>
                     </div>
                     <a id="rotated" class="arrow" href="#trip1"><img class="transform"
-                            src="assets/icons/arrow-white.svg" alt="scroll-up-arrow" /></a>
+                            src="assets/icons/arrow-white.svg" alt="move-up-arrow" /></a>
                 </div>
             </article>
         </section>
 
+        <!-- ----------------------------------------------- PETS SECTION ----------------------------------------------- -->
         <section id="pets" class="container">
             <header>
                 <h1>Animais</h1>
@@ -124,31 +141,83 @@
                 <div class="side-image column">
                     <section>
                         <header>
-                            <h2>Nala</h2>
+                            <h4>Nala</h4>
                         </header>
-                        <figure>
-                            <div><img src="assets/images/nala_kiss.jpg" alt="Me and Nala"></div>
-                            <figcaption>
-                                <i>Cãopanheira</i>
-                            </figcaption>
-                        </figure>
+                        <div class="swiffy-slider slider-nav-outside-expand slider-nav-autoplay slider-nav-autopause
+                            slider-nav-visible slider-nav-dark slider-nav-mousedrag slider-item-nogap">
+                            <ul class="slider-container">
+                                <li>
+                                    <figure>
+                                        <div><img src="assets/images/nala.jpeg" alt="Nala"
+                                                style="max-width: 100%;height: auto;"></div>
+                                        <figcaption>
+                                            <i>Depois do banho</i>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <div><img src="assets/images/nala_kiss.jpg" alt="Me and Nala"
+                                                style="max-width: 100%;height: auto;"></div>
+                                        <figcaption>
+                                            <i>Cãopanheira</i>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
 
+                            <button type="button" class="slider-nav"></button>
+                            <button type="button" class="slider-nav slider-nav-next"></button>
+
+                            <div class="slider-indicators">
+                                <button class="active"></button>
+                                <button></button>
+                                <button></button>
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <header>
-                            <h2>Pretinha</h2>
+                            <h4>Pretinha</h4>
                         </header>
-                        <figure>
-                            <div><img src="assets/images/pretinha.jpg" alt="Pretinha"></div>
-                            <figcaption style="text-align: center;">
-                                <i>Depois do banho</i>
-                            </figcaption>
-                        </figure>
+                        <div class="swiffy-slider slider-nav-outside-expand slider-nav-autoplay slider-nav-autopause
+                            slider-nav-visible slider-nav-dark slider-nav-mousedrag slider-item-nogap">
+                            <ul class="slider-container">
+                                <li>
+                                    <figure>
+                                        <div><img src="assets/images/pretinha.jpg" alt="Pretinha"
+                                                style="max-width: 100%;height: auto;"></div>
+                                        <figcaption>
+                                            <i>Depois do banho</i>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <div><img src="assets/images/pretinha_pneu.jpg" alt="Brinquedo Favorito"
+                                                style="max-width: 100%;height: auto;"></div>
+                                        <figcaption>
+                                            <i>Brinquedo Favorito</i>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="slider-nav"></button>
+                            <button type="button" class="slider-nav slider-nav-next"></button>
+
+                            <div class="slider-indicators">
+                                <button class="active"></button>
+                                <button></button>
+                                <button></button>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </article>
         </section>
 
+        <!-- ----------------------------------------------- HOBBIES SECTION ----------------------------------------------- -->
         <section id="hobbies" class="grid-column">
             <section id="games" class="container content">
                 <header>
@@ -201,12 +270,13 @@
                     </div>
                     <div class="side-image column">
                         <a target="_blank" href="https://www.youtube.com/watch?v=fbmI-z_mIpk"><img class="transform"
-                                src="assets/images/adele.jpg" alt=""></a>
+                                src="assets/images/adele.jpg" alt="Adele Picture" title="Adele"></a>
                     </div>
                 </article>
             </section>
         </section>
 
+        <!-- ----------------------------------------------- CAREER FIRST SECTION ----------------------------------------------- -->
         <section id="career1" class="grid-column">
             <section id="computer-science" class="container content">
                 <header>
@@ -224,7 +294,8 @@
                     <div class="side-image column">
 
                         <figure class="pc hidden">
-                            <div class="flex-center"><img src="assets/icons/gaming_controller.svg" alt=""></div>
+                            <div class="flex-center"><img src="assets/icons/gaming_controller.svg"
+                                    alt="Gaming Controller Icon"></div>
                             <figcaption>
                                 <p>Gosto por games e animações</p>
                             </figcaption>
@@ -233,7 +304,7 @@
 
                         <figure class="hidden">
                             <div class="flex-center" style="background-color: var(--yellow);"><img
-                                    src="assets/icons/computer.svg" alt=""></div>
+                                    src="assets/icons/computer.svg" alt="Computer Icon"></div>
                             <figcaption>
                                 <p>Interessado em tecnologia e programação</p>
                             </figcaption>
@@ -241,7 +312,7 @@
 
 
                         <figure class="pc hidden">
-                            <div class="flex-center"><img src="assets/icons/book.svg" alt=""></div>
+                            <div class="flex-center"><img src="assets/icons/book.svg" alt="Book icon"></div>
                             <figcaption>
                                 <p>Curte ler alguns livros acadêmicos</p>
                             </figcaption>
@@ -270,7 +341,7 @@
                         </a>
 
                         <a class="arrow" href="#career2">
-                            <img class="transform" src="assets/icons/arrow-purple.svg" alt="">
+                            <img class="transform" src="assets/icons/arrow-purple.svg" alt="move-down-arrow">
                         </a>
 
                     </div>
@@ -278,11 +349,12 @@
             </section>
         </section>
 
+        <!-- ----------------------------------------------- CAREER SECOND SECTION ----------------------------------------------- -->
         <section id="career2" class="grid-column">
             <section class="container">
                 <header>
                     <h3>Inglês Avançado</h3>
-                    <h4>Cultura Inglesa</h4>
+                    <h5>Cultura Inglesa</h5>
                 </header>
                 <article class="content">
                     <div class="side-info">
@@ -295,7 +367,7 @@
             <section class="container">
                 <header>
                     <h3>Ciência da Computação</h3>
-                    <h4>Unifal</h4>
+                    <h5><abbr title="Universidade Federal de Alfenas">Unifal</abbr></h5>
                 </header>
                 <article class="content">
                     <div class=".side-info">
@@ -308,6 +380,8 @@
             </section>
         </section>
     </main>
+
+    <!-- ----------------------------------------------- FOOTER ----------------------------------------------- -->
     <footer>
         <div class="gradient"></div>
         <section class="container grid-column">
@@ -330,11 +404,15 @@
                 <article>
                     <div class="side-image">
                         <a href="https://www.linkedin.com/in/leonardo-reis-coimbra-910444278/"><img class="transform"
-                                src="assets/icons/linkedin.svg" alt="bla"></a>
-                        <a href="#"><img class="transform" src="assets/icons/github.svg" alt=""></a>
-                        <a href="#"><img class="transform" src="assets/icons/instagram.svg" alt=""></a>
-                        <a href="#"><img class="transform" src="assets/icons/facebook.svg" alt=""></a>
-                        <a href="#"><img class="transform" src="assets/icons/gmail.svg" alt=""></a>
+                                src="assets/icons/linkedin.svg" alt="Linkedin Icon" title="Linkedin"></a>
+                        <a href="#"><img class="transform" src="assets/icons/github.svg" alt="GitHub Icon"
+                                title="Github"></a>
+                        <a href="#"><img class="transform" src="assets/icons/instagram.svg" alt="Instagram Icon"
+                                title="Instagram"></a>
+                        <a href="#"><img class="transform" src="assets/icons/facebook.svg" alt="Facebook Icon"
+                                title="Facebook"></a>
+                        <a href="#"><img class="transform" src="assets/icons/gmail.svg" alt="Gamil Icon"
+                                title="Gmail"></a>
                     </div>
                 </article>
             </section>

@@ -45,10 +45,15 @@ h3 {
 }
 
 h4 {
-  font-size: 19px;
+  font-size: 28px;
+  font-family: 'IBM Plex Sans Condensed';
 }
 
 h5 {
+  font-size: 19px;
+}
+
+h6 {
   font-size: 16px;
 }
 
@@ -346,6 +351,19 @@ main>section {
 
 #pets .side-image figcaption {
   font-weight: 400;
+}
+
+#pets .slider-indicators {
+  display: none;
+} 
+
+#pets .slider-nav-dark .slider-nav::after {
+  background-color: var(--violet) !important;
+}
+
+#pets .swiffy-slider button {
+  opacity: 1;
+  transform: scale(.5);
 }
 
 /*----------------------------------------------- HOBBIES SECTION -----------------------------------------------*/
