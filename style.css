@@ -600,8 +600,7 @@ footer .side-image {
   }
 
   .gray-pic {
-    background-size: contain;
-    background-position: center center;
+    background-size: contain !important;
   }
 
   .hide {
