@@ -133,7 +133,7 @@ nav {
 
   justify-content: center;
   flex-grow: 1;
-  
+
   list-style-type: none;
 }
 
@@ -178,7 +178,7 @@ main>section {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-flow: row nowrap;  
+  flex-flow: row nowrap;
 }
 
 .transform {
@@ -372,7 +372,7 @@ main>section {
 
 #pets .slider-indicators {
   display: none;
-} 
+}
 
 #pets .slider-nav-dark .slider-nav::after {
   background-color: var(--violet) !important;
@@ -597,10 +597,6 @@ footer .side-image {
 
   nav {
     justify-content: space-between;
-  }
-
-  .gray-pic {
-    background-size: contain !important;
   }
 
   .hide {
